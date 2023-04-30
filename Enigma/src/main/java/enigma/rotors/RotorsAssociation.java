@@ -6,37 +6,35 @@ public class RotorsAssociation {
     Rotor rotorB = new Rotor();
     Rotor rotorC = new Rotor();
 
-    public RotorsAssociation(Rotor rotorA, Rotor rotorB, Rotor rotorC) {
-        this.rotorA = rotorA;
-        this.rotorB = rotorB;
-        this.rotorC = rotorC;
+    public RotorsAssociation() {
+        
     }
 
     public void resetRolls() {
-        rotorA.setCurrentLetter(getRotorA().getHead());
-        rotorB.setCurrentLetter(getRotorB().getHead());
-        rotorC.setCurrentLetter(getRotorC().getHead());
+        this.rotorA.reset();
+        this.rotorB.reset();
+        this.rotorC.reset();
+    }
+
+    public char letterRollA() {
+        return this.letterRollA.position();
     }
 
     public char letterRollB() {
-        return letterRollB.getLetter();
-    }
-
-    public char letterRollB() {
-        return letterRollB.getLetter();
+        return this.letterRollB.position();
     }
 
     public char letterRollC() {
-        return letterRollC.getLetter();
+        return this.letterRollC.position();
     }
 
     @Override
-    public void roll() {
-        if(rotorA.lastLetter()) {
-            if(rotorB.lastLetter()) rotorC.roll();
-            rotorB.roll();
+    public void rollAll() {
+        if(this.this.rotorA.lastLetter()) {
+            if(this.rotorB.lastLetter()) this.rotorC.roll();
+            this.rotorB.roll();
         } 
-        rotorA.roll();
+        this.rotorA.roll();
     }
 
     public void setRotorA(CircularLinkedList rotorA) {
