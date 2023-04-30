@@ -22,7 +22,15 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
+
 }
+
+// test {
+//     useJUnitPlatform()
+//     testLoggin {
+//         events "passed", "skipped", "failed"
+//     }
+// }
 
 application {
     // Define the main class for the application.
