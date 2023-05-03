@@ -4,8 +4,8 @@ import enigma.list_config.*;
 
 public class Rotor {
 
-    private CircularLinkedList rotor = new CircularLinkedList();
-    private CircularListNode currentLetter;
+    private CircularLinkedList<V> rotor = new CircularLinkedList();
+    private CircularListNode<V> currentLetter;
     private char[] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 
     public Rotor() {
@@ -34,11 +34,11 @@ public class Rotor {
         return this.currentLetter.getLetter();
     }
 
-    public CircularLinkedList getRotor() {
+    public CircularLinkedList<V> getRotor() {
         return rotor;
     }
 
-    public void setRotor(CircularLinkedList rotor) {
+    public void setRotor(CircularLinkedList<V> rotor) {
         this.rotor = rotor;
     }
 
@@ -52,11 +52,11 @@ public class Rotor {
         this.alphabet = alphabet;
     }
 
-    public CircularListNode getCurrentLetter() {
+    public CircularListNode<V> getCurrentLetter() {
         return currentLetter;
     }
 
-    public void setCurrentLetter(CircularListNode currentLetter) {
+    public void setCurrentLetter(CircularListNode<V> currentLetter) {
         this.currentLetter = currentLetter;
     }
     

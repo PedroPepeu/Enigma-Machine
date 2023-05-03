@@ -8,7 +8,7 @@
 
 **Subject**: Estrutura de Dados 1
 
-**Objective**: Do list node structure
+**Objective**: Do rotor association structure
 
 
 ## Description

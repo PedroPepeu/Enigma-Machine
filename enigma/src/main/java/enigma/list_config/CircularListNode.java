@@ -1,38 +1,54 @@
 package enigma.list_config;
 
-public class CircularListNode {
+public class CircularListNode<V> {
     
-    private char letter;
-    private CircularListNode previous;
-    private CircularListNode next;
+    private V letter;
+    private CircularListNode<V> previous;
+    private CircularListNode<V> next;
 
-    public CircularListNode(char letter, CircularListNode previous, CircularListNode next) {
+    public CircularListNode(V letter, CircularListNode<V> previous, CircularListNode<V> next) {
         this.letter = letter;
         this.next = next;
         this.previous = previous;
     }
 
-    public void setPrevious(CircularListNode previous) {
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj) return true;
+
+        if(obj instanceof CircularListNode<?>) {
+            CircularListNode<?> other = (CircularListNode<?>) obj;
+            return this.value.equals(other.value);
+        }
+
+        return false;
+    }
+
+    public char toChar() {
+        return this.letter.toString();
+    }
+
+    public void setPrevious(CircularListNode<V> previous) {
         this.previous = previous;
     }
 
-    public CircularListNode getPrevious() {
+    public CircularListNode<V> getPrevious() {
         return this.previous;
     }
 
-    public void setNext(CircularListNode next) {
+    public void setNext(CircularListNode<V> next) {
         this.next = next;
     }
 
-    public CircularListNode getNext() {
+    public CircularListNode<V> getNext() {
         return this.next;
     }
 
-    public char getLetter() {
+    public V getLetter() {
         return letter;
     }
 
-    public void setLetter(char letter) {
+    public void setLetter(V letter) {
         this.letter = letter;
     }
     

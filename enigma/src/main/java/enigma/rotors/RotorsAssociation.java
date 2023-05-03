@@ -37,27 +37,27 @@ public class RotorsAssociation {
         this.rotorA.roll();
     }
 
-    public void setRotorA(CircularLinkedList rotorA) {
+    public void setRotorA(CircularLinkedList<V> rotorA) {
         this.rotorA = rotorA;
     }
 
-    public CircularLinkedList getRotorA() {
+    public CircularLinkedList<V> getRotorA() {
         return rotorA;
     }
 
-    public void setRotorB(CircularLinkedList rotorB) {
+    public void setRotorB(CircularLinkedList<V> rotorB) {
         this.rotorB = rotorB;
     }
 
-    public CircularLinkedList getRotorB() {
+    public CircularLinkedList<V> getRotorB() {
         return rotorB;
     }
 
-    public void setRotorC(CircularLinkedList rotorC) {
+    public void setRotorC(CircularLinkedList<V> rotorC) {
         this.rotorC = rotorC;
     }
 
-    public CircularLinkedList getRotorC() {
+    public CircularLinkedList<V> getRotorC() {
         return rotorC;
     }
 
